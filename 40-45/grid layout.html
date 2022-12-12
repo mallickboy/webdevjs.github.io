@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Media Queries with CSS Grid</title>
+</head>
+
+<body>
+    <h2>Using Media Queries with CSS Grid</h2>
+
+    <div class="container6">
+        <nav class="bpn"><span>Home</span> <span>About</span> <span>Contact</span> </nav>
+        <section class="bpn">
+            <h2>Learn CSS in hindi</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, sint temporibus? Temporibus tempore illo quam. Voluptate et itaque exercitationem dignissimos? Autem, deserunt ab, architecto libero pariatur ipsa laborum dignissimos perspiciatis mollitia sint error ea aliquid, unde similique nostrum optio harum saepe! Maxime, quod rerum officiis dolore perspiciatis ab ea culpa consequatur, itaque id debitis nisi molestiae voluptatibus ullam necessitatibus error, alias voluptatem laborum fuga ratione? Id deserunt explicabo, quibusdam quae officiis nesciunt, laborum excepturi harum distinctio molestiae ullam sunt deleniti autem expedita illum. Modi ab ad incidunt pariatur? Reiciendis, quaerat. Perferendis nesciunt nobis, illo architecto minima, aliquid molestias ullam rem repellat explicabo odit. Possimus illo consequatur non, numquam libero dolor natus, sint commodi officia eum quidem saepe sit dolorem animi ut et distinctio? Suscipit dignissimos reiciendis distinctio consequatur qui quasi quod, quam iusto voluptates quia? Ratione, numquam asperiores! Itaque aut quos, delectus officia aperiam non totam incidunt nostrum animi aliquam?</p>
+        </section>
+        <aside class="bpn">
+            <h1>More about us</h1>
+        </aside>
+    </div>
+    <footer class="bpn">Copyright &copy; Tamal Mallick 2022</footer>
+
+    <style>
+        .container6 {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                "navbar navbar navbar navbar"
+                "section section section aside"
+                "footer footer footer footer";
+        }
+
+        nav{
+            grid-area: navbar;
+            font-size: 30px;
+            
+        }
+
+        section {
+            grid-area: section;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        footer {
+            grid-area: footer;
+            text-align: center;
+        }
+
+        .bpn {
+            border: 2px solid black;
+            padding: 10px 23px;
+            background-color: wheat;
+        }
+
+        @media only screen and (min-width:0px) and (max-width:600px) {
+            body{
+                background-color:red;
+            }
+            .container6 {
+                grid-template-areas:
+                "navbar navbar navbar navbar"
+                "section section section section"
+                "aside aside aside aside"
+                "footer footer footer footer";
+            }
+            span{
+                display: block;
+                text-align: center;
+            }
+            aside{
+                display: none;
+            }
+        }
+        @media only screen and (min-width:600px) and (max-width:1200px) {
+            body{
+                background-color:blue;
+            }
+            
+            .container6 {
+                grid-template-areas:
+                "navbar navbar navbar navbar"
+                "section section section section"
+                "aside aside aside aside"
+                "footer footer footer footer";
+            }  
+            span{
+                display: block;
+                text-align: center;
+            }  
+        }
+        @media only screen and (min-width:1200px) and (max-width:1800px) {
+            body{
+                background-color:green;
+            }
+        }
+        @media only screen and (min-width:1800px)  {
+            body{
+                background-color:yellow;
+            }
+        }
+        
+    </style>
+</body>
+
+</html>

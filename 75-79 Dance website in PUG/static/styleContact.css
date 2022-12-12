@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Indie+Flower&family=Shadows+Into+Light&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 79.3vh;
+
+    margin-top: 30px;
+}
+h1{
+    text-align: center;
+    margin: 12px 0;
+    font-family: 'Indie Flower', cursive;
+    font-size: 39px;
+}
+.myForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.myInput{
+    width:40%;
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    border: 2px solid rgb(92, 0, 0);
+    border-radius: 9px;
+}
+.btn{
+    font-size: 20px;
+    padding: 6px 12px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: rgb(178 0 2);
+    color: white;
+    margin: 20px 0px;
+    font-weight: bold;
+    cursor: pointer;
+    
+}

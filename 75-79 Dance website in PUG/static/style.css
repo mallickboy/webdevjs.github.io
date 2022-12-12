@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Indie+Flower&family=Shadows+Into+Light&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#logo{
+    display: flex;
+    color: white;
+    align-items: center;
+    margin: 0 14px;
+    font-size: 22px;
+    font-weight: bold;
+}
+#logo img{
+    height: 40px;
+    filter: invert(1);
+}
+#navbar {
+    background-color: rgb(171, 25, 25);
+    padding: 13px 4px;
+    /* font-family: 'Shadows Into Light', cursive; */
+    /* font-family: 'Bree Serif', serif; */
+    font-family: 'Indie Flower', cursive;
+}
+
+#navbar ul {
+
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#navbar li {
+    list-style: none;
+}
+
+#navbar li a {
+    text-decoration: none;
+    padding: 13px 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    
+}
+#navbar li a:hover{
+    color: black;
+}
+
+#introSection {
+    height: 620px;
+    background-color: aliceblue;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bree Serif', serif;
+    font-size: 47px;
+    padding-bottom: 50px;
+    background: url('/static/dance2.jpg')   center /cover no-repeat;
+}
+#introSection .small{
+    font-size: 37px;
+    /* font-weight: 12px; */
+}
+
+#missionSection {
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    width: 80%;
+}
+#missionSection h2 {
+    text-align: center;
+    padding-top:12px;
+    /* font-family: 'Bree Serif', serif;     */
+    font-family: 'Indie Flower', cursive;
+    font-size: 36px;
+}
+.card{
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 30%;
+    margin: 23px 20px;
+    margin-top: 15px;
+    height: 190px;
+    background-color: blanchedalmond;
+
+}
+.card h3{
+    text-align: center;
+    margin:15px 12px 6px 12px;
+}
+.card-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.card-img{
+    height: 130px;
+    padding: 0 14px;
+    margin: 4px 7px;
+}
+.card-img img{
+    height: inherit;
+}
+.card-content{
+    padding: 0 10px;
+}
+.card-content p{
+    font-size: 19px;
+}
+#sponsorSection {
+    height: 300px;
+    background-color: aqua;
+}
+#sponsorSection h2 {
+    text-align: center;
+    padding-top:22px;
+    /* font-family: 'Bree Serif', serif;     */
+    font-family: 'Indie Flower', cursive;
+    font-size: 36px;
+}
+#sponsors{
+    height: 120px;
+    max-width: 36%;
+    margin:23px  auto;
+
+}
+.spImage{
+    height: 80%;
+    margin: 20px;
+}
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-family: 'Indie Flower', cursive;
+}

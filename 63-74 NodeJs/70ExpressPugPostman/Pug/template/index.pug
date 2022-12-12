@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#{title}</title>
+    <!-- <link rel="stylesheet" href="../staticFolder/style.css"> it renders as pug not as HTML so include in the pug way-->
+    style
+        include ../staticFolder/style.css
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href=""> Home</a></li>
+            <li><a href=""> About</a></li>
+            <li><a href=""> Products</a></li>
+            <li><a href=""> Contact us</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+
+        <h2>Get the gyn membership for only $60 Fill the form now</h2>
+        
+        <form action="/" id="contact" method="post">
+            <input type="text" name="name"id="name " placeholder="Enter your name">
+            <input type="text" name="age"id="age " placeholder="Enter your age">
+            <input type="text" name="gender"id="gender " placeholder="Enter your gender">
+            <!-- <input type="number" name="" id=""> -->
+            <textarea name="address" id="address" cols="30" rows="4" placeholder="Enter your address"></textarea>
+            <textarea name="more" id="more" cols="30" rows="5" placeholder="Enter more about you.."></textarea>
+            <button class="btn">Submit</button>
+        </form>
+        <!-- <p> 
+            | #{content}
+            | uihkjuhjk 
+        </p> -->
+    </div>
+    </body>
+</html>

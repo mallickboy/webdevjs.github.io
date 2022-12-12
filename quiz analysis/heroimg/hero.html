@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="topic">
+        <h2>Business initiative & advertizement [40%]</h2>
+        <div class="container1">
+            <div class="box"><img src="b1.png" alt=""></div>
+            <div class="box"><img src="b7.png" alt=""></div>
+            <div class="box"><img src="b9.png" alt=""></div>
+            <div class="box"><img src="b4.png" alt=""></div>
+            <div class="box"><img src="b6.png" alt=""></div>
+            <div class="box"><img src="b2.png" alt=""></div>
+            <div class="box"><img src="b3.png" alt=""></div>
+            <div class="box"><img src="b5.png" alt=""></div>
+            <div class="box"><img src="b8.png" alt=""></div>
+            <div class="box"><img src="b10.png" alt=""></div>
+            <!-- <div class="box"><img src="heroimg/b11.png" alt=""></div> -->
+            
+            
+        </div>
+    </div>
+    <hr>
+    <div class="topic">
+        <h2>History [28%]</h2>
+        <div class="container1">
+            <div class="box"><img src="h6.png" alt=""></div>
+            <div class="box"><img src="he2.png" alt=""></div>
+            <div class="box"><img src="h3.png" alt=""></div>
+            <div class="box"><img src="h1.png" alt=""></div>
+            <div class="box"><img src="h4.png" alt=""></div>
+            <div class="box"><img src="h5.png" alt=""></div>
+            <div class="box"><img src="h7.png" alt=""></div>
+            
+        </div>  
+    </div>
+    <hr>
+    <div class="topic">
+        <h2>Model name & technology  [ 20 %]</h2>
+        <div class="container1">
+            <div class="box"><img src="mt1.png" alt=""></div>
+            <div class="box"><img src="mt2.png" alt=""></div>
+            <div class="box"><img src="mt4.png" alt=""></div>
+            <div class="box"><img src="mt3.png" alt=""></div>
+            <div class="box"><img src="mt5.png" alt=""></div>
+            <!-- <div class="box"><img src="heroimg/mt6.png" alt="">kk</div> -->
+        </div>
+    </div>
+    <hr>
+    <div class="topic">
+        <h2>Mistry & reasoning [12%]</h2>
+        <div class="container1">
+            <div class="box"><img src="q1.png" alt=""></div>
+            <div class="box"><img src="q2.png" alt=""></div>
+            <div class="box"><img src="q3.png" alt=""></div>
+            <!-- <div class="box"><img src="heroimg/q4.png" alt=""></div> -->
+            
+        </div>
+    </div>
+    
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        img{
+            height: auto;
+            width: 100%;
+            /* object-fit: contain; */
+        }
+        .container1{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: azure;
+        }
+        h2{
+            text-align: center;
+            text-decoration: underline;
+            font-weight: bold;
+            font-size: 40px;
+            margin: 20px 2px;
+        }
+        .box{
+            display: flex;
+            height: auto;
+            width: 29%;
+            background-color: azure;
+            border: 2px solid black;
+            margin: 2% 2%;
+            /* position:static; */
+             align-items: center;
+            justify-content: center; 
+
+        }
+        hr{
+            height: 5px;
+            background-color: brown;
+        }
+        @media (max-width:900px){
+            .box{
+                width: 45%;
+            }
+            h2{
+                font-size:30px;
+                /* margin: 20px 2px; */
+            }
+        }
+        @media (max-width:650px) {
+            .box{
+                width: 90%;
+            }
+            h2{
+                font-size:15px;
+            }
+        }
+    </style>
+</body>
+</html>

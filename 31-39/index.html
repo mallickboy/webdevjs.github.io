@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on selector</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+</head>
+
+<body>
+    <h1>This is more on selector</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <p>This is under ul under div</p>
+                <li>
+                    <p>This is inside li</p>
+                </li>
+            </ul>
+            <p>This is a paragraph</p>
+        </div>
+        <p>This is a outer paragraph</p>
+    </div>
+    <p>This is a outermost paragraph</p>
+
+    <style>
+        h1 {
+            background-color: rgb(255, 215, 215);
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* p is under li & li  is under div  */
+        div li p {
+            background-color: green;
+        }
+
+        /*p is only under the div  */
+        div>p {
+            background-color: yellow;
+        }
+
+        /* p is after a div (both are siblings) */
+        div+p {
+            background-color: aquamarine;
+        }
+    </style>
+
+
+    <h2>Attribute and nth child pseudo seelector</h2>
+    <div class="container2">
+        <form action="" class="form-control">
+            <input type="text" placeholder="Enter your name">
+            <input type="password" placeholder="Enter your password">
+            <input type="email" placeholder="Enter your email">
+            <input type="submit" value="Submit">
+
+        </form>
+        <ul>
+            <li class="item" id="item-1">Item1</li>
+            <li class="item" id="item-2">Item2</li>
+            <li class="item" id="item-3">Item3</li>
+            <li class="item" id="item-4">Item4</li>
+            <li class="item" id="item-5">Item5</li>
+            <li class="item" id="item-6">Item6</li>
+            <li class="item" id="item-7">Item7</li>
+            <li class="item" id="item-8">Item8</li>
+            <li class="item" id="item-9">Item9</li>
+            <li class="item" id="item-10">Item10</li>
+        </ul>
+        <h1><a href="http://google.com" target="_blank">Go to GOOGLE</a></h1>
+        <h1><a href="http://facebook.com" target="_self">Go to FACEBOOK</a></h1>
+    </div>
+    <style>
+        .container2 {
+            /* margin: 20px 20px; */
+            display: block;
+            width: 200px;
+            margin: auto;
+
+        }
+
+        input {
+            display: block;
+        }
+
+        /* attribute , terger specific pseudo selector   */
+        input[type='text'] {
+            padding: 23px;
+            border: 2px solid green;
+        }
+
+        input[type='email'] {
+            padding: 7px;
+            border: 4px solid green;
+        }
+
+        a[target] {
+            font-size: 22px;
+            text-decoration: none;
+            color: rgb(139, 0, 139);
+        }
+
+        a[href="http://facebook.com"] {
+            font-size: 32px;
+            text-decoration: none;
+            color: rgb(235, 96, 96);
+        }
+
+        /* this will apply css for n=3 child  */
+        li:nth-child(3) {
+            color: coral;
+        }
+
+        /* this will apply on (n+a) items wher n= 0 to 1/0  */
+        /* 3n+1 = 1,4,7,10.... */
+        li:nth-child(3n+1) {
+            color: rgb(112, 80, 255);
+        }
+
+        li:nth-child(odd) {
+            background-color: rgb(212, 255, 213);
+        }
+    </style>
+
+<h2>Box shadow and text shadow</h2>
+    <div class="container3">
+        <div class="card" id="card-1"><h2>This is C++ course </h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, perferendis ratione consequuntur corrupti mollitia eius saepe aliquam optio sequi molestias amet nostrum dicta dolorum quasi reiciendis perspiciatis itaque temporibus. Veniam</p>
+        </div>
+        <div class="card" id="card-2"><h2>This is HTML course</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero blanditiis illo repudiandae. Perspiciatis nobis dolore odio dicta cum dolorem quam sint aliquid, voluptatum quod placeat culpa molestiae est voluptatem animi.</p>
+        </div>
+        <div class="card" id="card-3"><h2>Card3</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quasi, rem atque labore voluptate amet tempora ea dicta ipsum eaque perspiciatis cumque dolores, culpa quaerat magnam doloribus repellat eligendi nostrum.</p>
+        </div>
+        <!-- <div class="card" id="card-4"><h2>Card4</h2></div> -->
+    </div>
+    <style>
+        .container3 {
+            display: flex;
+
+        }
+        .card{
+            padding: 23px 13px;
+            border: 2px solid blue;
+            background-color: rgb(236, 255, 249);
+            margin: 23px 13px;
+            /* box-shadow: (offset-x) (offset-y) (blur radious) (spread radious) ; */
+            box-shadow: 13px 13px 22px 20px rgb(255, 130, 130);
+            /* rgba(red,green,blue,alpha = color intensity) */
+            box-shadow: 13px 13px 22px 20px rgba(255, 143, 143, 0.15);
+            box-shadow: inset 3px 4px 5px green , 3px 4px 5px red;
+        }
+        .card h2{
+            text-shadow: 1px 2px 2px rgb(191, 191, 191);
+        }
+    </style>
+    
+    <h2>CSS variables and custom properties</h2>
+    <div class="container4">
+        <div class="box4"></div>
+        <div class="box4"></div>
+        <div class="box4"></div>
+        <div class="box4"></div>
+    </div>
+
+    <style>
+        :root{
+            --color1:blue;
+            --maxwidth:80%;
+
+        }
+        .box4{
+            width: 200px;
+            height: 200px;            
+            background-color: var(--color1);
+            margin: 4px 9px ;
+            border: 2px solid black;
+            box-shadow: 2px 2px 2px var(--color1);
+            
+        }
+        .container4{
+            display: flex;
+            width: var(--maxwidth);
+            margin: auto;
+            justify-content: center;
+            
+            background-color: var(--color1);
+            
+        }
+    </style>
+
+<h2>keyframes and animations</h2>
+<div class="container5">
+    <div class="box5">
+        This is a box
+    </div>
+</div>
+<style>
+    .container5{
+        background-color: yellow ;
+    }
+    .box5{
+        /* margin: 2px 2px; */
+        /* border: 2px solid black; */
+        background-color: aquamarine;
+        height: 200px;
+        width: 200px;
+        position: relative;
+        /* animation  */
+        /* animation-name: tamal1; */
+        animation-name: tamal2;
+        animation-duration: 2s;
+        animation-iteration-count: 2;
+        animation-fill-mode: forwards;
+        animation-timing-function:ease-in-out;
+        /* animation-delay: 3s; */
+        /* animation-direction: reverse; */
+        /* animation: (animation name) (animation duration) (ani timing function) (ani delay) (ani iteration count) (ani fill mode); */
+        animation: tamal 2s ease-in 2s 4 forwards;
+    }
+    @keyframes tamal{
+        0%{
+            top:0px;
+            left:0px
+        }
+        25%{
+            top:250px;
+            left:0px;
+        }
+        60%{
+            top:250px;
+            left:250px;
+        }
+        100%{
+            top:0px;
+            left:250px;
+        }
+    }
+    @keyframes tamal1{
+        form{
+            width: 100px;
+        }
+        to{
+            width: 300px;
+        }
+    }
+</style>
+
+
+<h2>37. CSS transitions </h2>
+    <div class="container6">
+        <div id="box6">
+            This is my text
+        </div>
+    </div>
+    <style>
+        #box6{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 200px;
+            background-color: #ff792b;
+            /* transition-property: background-color ;
+            transition-duration: 1s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 3s; */
+            /* transition: background-color 1s ease-in-out 3s; */
+            transition: all 1s ease-in-out 3s;
+        }
+        #box6:hover{
+            background-color: rgb(86, 255, 131);
+            height: 300px;
+            width: 400px;
+            border-radius: 100px;
+            font-size: 40px;
+            
+        } 
+    </style>
+
+<h2>38. CSS transform</h2>
+<div class="container7">
+    <div class="box7">
+        This is a box
+    </div>
+</div>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .container7{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* height: 800px; */
+        width: 80%;
+        height: 600px;
+        background-color:rgb(208, 208, 255);
+    }
+    .box7{
+        background-color: green;
+        height: 400px;
+        width: 400px;
+        border: 2px solid black;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 1s ease-in-out;
+        
+    }
+    .box7:hover{
+        /* transform: rotate(45deg); */
+        /* transform: skew(45deg) ; */
+        /* transform: skew(45deg) rotate(45deg); */
+        /* transform: scale(2); */
+        /* transform: translateX(200px); */
+        transform: translateY(200px);
+        transform: translate(123px, 123px);
+
+    }
+</style>
+
+</body>
+
+</html>

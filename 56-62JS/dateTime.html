@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date & Time In JavaScript</title>
+</head>
+
+<body>
+
+    <h2>hi</h2>
+    <script defer>
+        let limit=(10**9)*2;
+        let timeStart=new Date();
+        console.log(" started");
+        let i=0;
+        while (i<limit) {
+            i++;
+        }
+        let timeEnd=new Date();
+        console.log(" Ended");
+        let md=timeEnd.getMinutes()-timeStart.getMinutes();
+        let secd=timeEnd.getSeconds()-timeStart.getSeconds();
+        let msecd=timeEnd.getMilliseconds()-timeStart.getMilliseconds();
+        console.log(timeStart, timeEnd);
+        console.log(md,secd,msecd);
+
+
+    </script>
+</body>
+
+</html>

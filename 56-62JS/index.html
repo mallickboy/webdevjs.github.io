@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Navigating The DOM</h2>
+    <div class="container1" id="main1">
+        <ul id="nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>More about us</li>
+            <li>Contact us</li>
+        </ul>
+    </div>
+    <div class="container1">
+        Another container
+    </div>
+    <script>
+        let main = document.getElementById("main1");
+        let nav = document.getElementById('nav');
+        let container1 = document.getElementsByClassName('container1');
+        console.log(main);
+        console.log(nav);
+        console.log(container1);
+        let sel = document.querySelector('#nav>li'); // css selector
+        let selall = document.querySelectorAll('#nav>li'); // css selector
+        console.log(sel)
+        console.log(selall)
+    </script>
+
+
+    <h2> Events & Listening to Events</h2>
+    <!-- Browser events :
+    click
+    contextmenu
+    mouseover/mouseout
+    mousedown/mouseup
+    mousemove
+
+    submit
+    focous
+    DOMcontentLoaded
+
+    transitionend -->
+
+    <div class="container2">
+        <h2>This is my heading</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat quisquam vero autem magnam excepturi animi
+            quos similique quam odit consequuntur alias aliquid, earum est nemo voluptatibus dolores! Commodi vero
+            consequuntur obcaecati veniam et maxime explicabo, hic aspernatur culpa cum magni, minus voluptatem alias
+            nihil, ab fugit quidem quo expedita fugiat aut. Sunt vero temporibus dolore assumenda hic quidem molestiae
+            enim iure soluta mollitia? Totam rerum molestias asperiores unde quidem aliquid tempora laboriosam tempore,
+            ex ea. Harum, atque enim earum inventore, architecto dolores debitis obcaecati sit reiciendis libero
+            blanditiis officia provident necessitatibus dolor quasi quis. Odit enim perspiciatis tempora cupiditate
+            nihil repellendus velit quam aliquam error est earum molestiae temporibus eius voluptatem laboriosam id
+            mollitia, nesciunt consequuntur tenetur rem. Cum, nihil quos voluptate illo quo iusto sit quasi laboriosam
+            voluptates exercitationem error possimus magnam doloribus cumque eius illum architecto saepe suscipit soluta
+            veritatis. Enim dicta eveniet voluptates labore tempora. Tempora ut culpa aut suscipit. Quo assumenda,
+            maiores fugit quos eaque est fuga itaque. Quaerat provident at debitis sunt! Eveniet animi nobis doloribus
+            aliquid omnis suscipit, optio, excepturi voluptatibus modi facere porro expedita ratione consequatur?
+            Quaerat ipsa odit totam magnam ut fugiat rem laudantium quae, at quam aspernatur modi ullam praesentium
+            nulla.</p>
+
+    </div>
+    <button id="btn" onclick="toggleHide()">Show/Hide</button>
+    <style>
+        #btn {
+            padding: 7px;
+            color: red;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 2px solid black;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        console.log('\n\n Events & Listening to Events\n\n');
+        let para = document.querySelector(".container2>p");// global veribale
+
+        para.addEventListener('mouseover', function run() {
+            console.log('Mouse inside');
+            para.style.background = 'wheat';
+        })
+        para.addEventListener('mouseout', function run() {
+            console.log('Mouse outside');
+            para.style.background = 'white';
+        })
+        console.log(para);
+        function toggleHide() {
+            // let btn=document.getElementById("btn");
+            // let para=document.querySelector(".container2>p");
+
+
+            if (para.style.display != 'none') {
+                para.style.display = 'none';
+            } else {
+                para.style.display = 'flex';
+                para.style.border = '2px solid black';
+            }
+        }
+    </script>
+
+    <h2>setInterval & setTimeOut</h2>
+    <div class="container3">
+        <h2>Time is <h1><span id="datetime"></span></h1>
+        </h2>
+    </div>
+    <script>
+        console.log('\n\nsetInterval & setTimeOut\n\n');
+
+        // setTimeout --> Runs a function once after the interval of time 
+        // setTimeout --> Runs a function repeatedly after the interval of time 
+        function greet(name, text) {
+            console.log(name + ' Hellow good morning !!! ' + text)
+        }
+        // setTimeout(() => {
+        //     console.log('Hellow good morning')
+
+        // }, 1000);
+        let name = "Tamal", text1 = "Please sing up";
+        let timeoutId = setTimeout(greet, 5000, name, text1);
+
+
+        // if (confirm("already Signed up")) {
+        //     clearTimeout(timeoutId);
+        // }
+        let timeIntervalId = setInterval(greet, 2000, 'tamal', 'good night');
+        console.log(timeIntervalId);
+        clearInterval(timeIntervalId);
+
+        function DisplayTime() {
+            time = new Date();
+            // console.log(time);
+            document.getElementById('datetime').innerHTML = time;
+        }
+        setInterval(DisplayTime, 1000);
+    </script>
+
+    <h2>Date & Time In JavaScript</h2>
+    <div class="container4">
+        This is a container
+        <h1>Current time is <span id="time"></span></h1>
+    </div>
+
+    <script>
+        console.log('\n\nDate & Time In JavaScript\n\n');
+        // let dt= new Date(0);
+        let dt = new Date(1000);
+        // let newDate=new Date('2122-12-8');
+        console.log(dt);
+        // console.log(newDate);
+        // let newDate=new Date(year ,month , day ,hours ,minutes ,seconds ,milliseconds );
+        // let newDate=new Date(5022,11,8,9,23,45,10);
+        let newDate = new Date();
+        console.log(newDate);
+        let yr = newDate.getFullYear();
+        console.log(yr);
+        let month = newDate.getMonth();
+        let day = newDate.getDay();
+
+        let hour = newDate.getHours();
+        console.log(month);
+        console.log('day = ', day);
+        newDate.setDate(32);
+        console.log(newDate);
+        console.log(Date.now());
+
+        // let hr=
+        // display time in page
+        setInterval(() => {
+            let time = new Date();
+            let amPm = ' AM';
+            let hr = time.getHours();
+            let min = time.getMinutes();
+            let sec = time.getSeconds();
+            if (hr == 12) {
+                amPm = ' PM'
+
+                // if (hr==11 && min==59 && sec==59) {
+                //     amPm=' PM'; 
+                // }
+                // if (hr>12 ) {
+                //     hr=1;   
+                // }
+
+            } else if (!hr) {
+                hr = 12;
+                amPm = ' AM';
+            } else if (hr == 13) {
+                hr = 1;
+            }
+            document.getElementById('time').innerText = hr + ' : ' + min + ' : ' + sec + amPm;
+            // console.log(time.getHours()+' : '+ time.getMinutes()+' : '+time.getSeconds());
+
+        }, 1000);
+
+    </script>
+
+    <h2>Arrow Functions In JavaScript</h2>
+    <div class="container5">
+        Arrow Functions In JavaScript
+    </div>
+    <script>
+        console.log('\n\nArrow Functions In JavaScript\n\n');
+
+        // function greet() {
+        //     console.log('Hellow ');
+        // }
+        // Arrow function
+         greet=()=> {
+            console.log('Hellow ');
+        };
+        // let sum=(a,b)=>{
+        //     return a+b;
+        // };
+        let sum=(a,b)=>a+b;
+        let half=a=>a/10;
+        console.log(sum(2,3));
+        console.log(half(2));
+        greet();
+        setTimeout(() => {
+            console.log('We are inside set time out');
+        },2000);
+
+        let object={
+            greeting:'good morning ',
+            names:['Tamal','Raj',"Billu da"],
+            speak() {
+                this.names.forEach(element => {
+                    console.log(this.greeting+" kukuu "+element);  // this.greeting = laxical this = calling greeting from parent object
+                });
+            },
+            speak2() {
+                this.names.forEach(function fun(element){
+                    console.log(this.greeting+" kukuu "+element);  // this.greeting = calling greetig from the fun function
+                });
+            }
+
+        }
+        object.speak();
+        object.speak2();
+    </script>
+
+    <h2>Math Object In JavaScript</h2>
+    <div class="container6">
+        Math Object In JavaScript
+    </div>
+    <script>
+        console.log('\n\nMath Object In JavaScript\n\n');
+        let m=Math;
+        console.log(m);
+        // printing the constant
+        console.log(Math.E);
+        console.log(Math.PI);
+        console.log(Math.LN2);
+
+        // printing the Function
+        let a=5.6789 ,b=78;
+        console.log(a,b);
+        console.log(Math.round(a),Math.round(b));
+        console.log("3 to the power 4 = ",Math.pow(3,4));
+        console.log("squre root of 64 = ",Math.sqrt(64));
+        // ceil & floor
+        console.log("round up of 6.444 = ",Math.ceil(6.444));
+        console.log("round down of 6.444 = ",Math.floor(6.444));
+        
+        // absolute function ||
+        console.log("|-2| = ",Math.abs(-2));
+        
+        // Trigonomitric value in radian
+        console.log("Value of sing pi/2 (in radian) = ",(Math.sin(Math.PI)),' approxx' );
+        console.log("Value of sing pi/2 (in radian) = ",Math.floor(Math.sin(Math.PI)));
+
+        // Min Max
+        console.log('Min of 4,5,6 = ',Math.min(4,5,6));
+        console.log('Max of 4,5,6 = ',Math.max(4,5,6));
+
+        // Generating RANDOM number
+        console.log("The random number is (always between 0 & 1) = ",Math.random());
+        
+        // random number between a & b = a + (b-a)*Math.random() ;
+        let up=25,low=23;
+        console.log(`The random number [${low},${up}] = `,Math.round(low + (up-low)*Math.random() ) );
+
+    </script>
+</body>
+
+</html>

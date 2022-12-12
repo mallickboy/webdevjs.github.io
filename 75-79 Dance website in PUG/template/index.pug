@@ -1,0 +1,56 @@
+doctype html
+html
+  head
+    title Tamal Dance Academy
+    style
+      include ../static/style.css
+  body
+    nav#navbar 
+        ul
+            div#logo
+                img(src="../static/logo/logo5.png")
+                |TDA
+            li #[a(href="/")  Home ] 
+            li #[a(href="/") About ]
+            li #[a(href="/") Services ]
+            li #[a(href="/") Class info ]
+            li #[a(href="/") Contact us] 
+
+    section#introSection 
+        div Welcome to Tamal's Dance Academy 
+        div.small Eat Sleep Dance Repeat
+    section#missionSection 
+        h2 Our Missions
+        div.card
+            h3 Dance perfection
+            div.card-box 
+                div.card-img
+                    img(src="../static/logo/logo1.png")
+                div.card-content 
+                    p This is the best dance academy of the universe
+        div.card
+            h3 Dance the way you like 
+            div.card-box 
+                div.card-img
+                    img(src="../static/logo/logo5.png")
+                div.card-content 
+                    p This is the best dance academy of the universe
+        div.card
+            h3 Expart teaching
+            div.card-box 
+                div.card-img
+                    img(src="../static/logo/logo7.png")
+                div.card-content 
+                    p This is the best dance academy of the universe
+    section#sponsorSection 
+        h2 Our sponsors  
+        div#sponsors 
+            img(src="../static/sponsors/c1.png" ,alt="Sponsor Image" ,class="spImage")
+            img(src="../static/sponsors/c2.png" ,alt="Sponsor Image" ,class="spImage")
+            img(src="../static/sponsors/c3.png" ,alt="Sponsor Image" ,class="spImage")
+            img(src="../static/sponsors/c4.png" ,alt="Sponsor Image" ,class="spImage")
+    footer#footer 
+        |Copyright © 2022 TamalDanceAcademy.com | All rights reserved      
+
+    script(defer)
+      include ../static/script.js

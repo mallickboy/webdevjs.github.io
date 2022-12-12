@@ -1,0 +1,100 @@
+<!-- selector {property : value ;} -->
+<!-- h2,h3,p.intro,p#idd{color:green;} -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        p{
+            color:brown;
+        }
+        .bgPrimary{
+            color:blue;
+        }
+        /* Grouping selector  */
+        footer,span{
+            background-color:pink;
+            
+        }
+        .cdtool{
+            color:black;
+            background-color:rgb(159, 232, 159);
+            font-style: italic;
+        }
+        .fontss{
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 23px;
+            line-height: 2em;
+            
+        }
+        span{
+            font-weight: bold;
+            font-style: italic;
+        }
+        #para{
+            color: #ff09ffff;
+        }
+        .hwbb{
+            background-color: bisque;
+            height: 100px;
+            width: 440px;
+            border: 4px solid blue;
+            /* border-width: 4px;
+            border-color: blue;
+            border-style: solid; */
+            border-radius: 10px;
+        }
+        .hwbb2{
+            background-color: greenyellow;
+            height: 100px;
+            width: 400px;
+            border-top: 4px solid yellow;
+            border-left: 4px solid pink;
+            border-right: 4px solid blue;
+            border-bottom: 4px solid red;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 6px;
+        }
+        .hwbb3{
+            height: 200px;
+            width: 400px;
+            background-color: aliceblue;
+            background-image: url('https://yt3.ggpht.com/IGJVORGk_3od1LK-5UN-lzA3Pixz6UfX6wlOxpyArreFxz9xdlE1JJ9MKdmQQtjQhivSfeML_1U=s176-c-k-c0x00ffffff-no-rj');
+            /* repeat-x repeat-y */
+            background-repeat: no-repeat;    
+            background-position: bottom right;
+        }
+        </style>
+</head>
+<body>
+    <h3>This is css</h3>
+    <p style="color:blueviolet;background-color:blanchedalmond ">Lorem ipsum dolor sit.</p>
+    <p >Lorem ipsum dolor sit.</p>
+    <h3>css selector</h3>
+    <p class="bgPrimary">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
+    <div>
+        <p class="bgPrimary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet iste ab praesentium saepe sunt voluptas ullam nesciunt, ex accusantium quam dolore beatae architecto necessitatibus magni voluptatum aspernatur pariatur ipsa quisquam?</p>
+        <footer>This is footer.</footer>
+        <span>This is span</span>
+    </div>
+    <h3>Chrome developer tools</h3>
+    <p class="cdtool">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+    <h3>Fonts</h3>
+    <p class="fontss">Lorem ipsum dolor, <span>sit</span> amet consectetur adipisicing.</p>
+
+    <h3>colors in css</h3>
+    <p id="para">This is a paragraph.</p>
+
+    <h3>border background</h3>
+    <p class="hwbb">This is paragraph</p>
+    <p class="hwbb2">This is 2nd paragraph</p>
+    <p class="hwbb3">This is 3rd paragraph</p>
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Ubuntu Mono', monospace;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 900px;
+            border: 3px solid purple;
+            background: rgb(255, 235, 218);
+            margin: 33px auto;
+        }
+
+        .item {
+            border: 3px solid blue;
+            padding: 12px 3px;
+            margin: 12px 3px;
+            background: rgb(240, 216, 216);
+        }
+
+        #fruits {
+            float: left;
+            width: 49%;
+        }
+
+        #computer {
+            float: left;
+            width: 49%;
+        }
+
+        #stationary {
+            /*  float: left; */
+            clear: left;
+            /* dont allow floating element from left to overlap*/
+            width: 100%;
+        }
+
+        p,
+        h3 {
+            text-align: right;
+            text-align: center;
+            text-align: justify;
+            /* text-align: left; */
+        }
+
+        h1 {
+            width: 310px;
+            margin: auto;
+        }
+
+        .container2 {
+            border: 2px solid green;
+            background-color: rgb(224, 245, 181);
+            padding: 34px;
+            margin: 34px auto;
+            width: 664px;
+        }
+
+        .btn {
+            background: crimson;
+            padding: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 13px;
+            border-radius: 4px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            background: greenyellow;
+        }
+
+        a:visited {
+            color: yellow;
+        }
+
+        a:active {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to my store</h1>
+        <div id="fruits" class="item">
+            <h3>Fruits</h3>
+            <p id="fruitspara" class="para">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, blanditiis! Hic quae incidunt unde
+                repellat vero expedita. Nisi quaerat excepturi atque delectus ducimus quae rerum blanditiis,
+                reprehenderit rem deleniti beatae libero ea odit? Obcaecati pariatur illo adipisci, nam veritatis harum.
+            </p>
+        </div>
+        <div id="computer" class="item">
+            <h3>Computer</h3>
+            <p id="computerpara" class="para">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, blanditiis! Hic quae incidunt unde
+                repellat vero expedita. Nisi quaerat excepturi atque delectus ducimus quae rerum blanditiis,
+                reprehenderit rem deleniti beatae libero ea odit? Obcaecati pariatur illo adipisci, nam veritatis harum.
+            </p>
+        </div>
+        <div id="stationary" class="item">
+            <h3>Stationary</h3>
+            <p id="stationarypara" class="para">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, blanditiis! Hic quae incidunt unde
+                repellat vero expedita. Nisi quaerat excepturi atque delectus ducimus quae rerum blanditiis,
+                reprehenderit rem deleniti beatae libero ea odit? Obcaecati pariatur illo adipisci, nam veritatis harum.
+            </p>
+        </div>
+    </div>
+
+
+    <h2>Links and button style</h2>
+    <div class="container2">
+        <h3>This is my heading</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam illum dolor impedit autem nobis eum dolore
+            cum dicta quo at, quia accusamus sequi provident nostrum, consequuntur consectetur laborum, eligendi nulla
+            voluptatem soluta iusto libero. </p>
+        <a href="https://facebook.com" class="btn">Read more</a>
+        <button class="btn">Contact us</button>
+    </div>
+    <h2>Navigation menu</h2>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact us</a></li>
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="Search this website">
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <style>
+        .navbar {
+            background-color: rgb(0, 0, 0);
+            border-radius: 7px;
+        }
+
+        .navbar ul {
+            overflow: auto;
+        }
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            margin: 9px 14px;
+            padding: 4px 0px;
+        }
+
+        .navbar li a {
+            padding: 3px;
+            color: white;
+        }
+
+        .search {
+            color: rgb(255, 255, 255);
+            padding: 9px 41px;
+            float: right;
+        }
+
+        .navbar input {
+            border: 2px solid black;
+            border-radius: 4px;
+            padding: 4px 15px;
+        }
+    </style>
+    <h2>Display property</h2>
+    <header class="port">
+        <img src="https://avatars.githubusercontent.com/u/96945731?v=4" alt="">
+        <h3>Welcome to Tamal's blog</h3>
+    </header>
+    <div class="container3">
+        <div class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aspernatur, ipsum labore beatae minus
+                molestiae dolorum aut, iste dicta sequi eveniet? Earum velit cumque corrupti laborum iure quaerat
+                dignissimos placeat!</p>
+        </div>
+        <div class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aspernatur, ipsum labore beatae minus
+                molestiae dolorum aut, iste dicta sequi eveniet? Earum velit cumque corrupti laborum iure quaerat
+                dignissimos placeat!</p>
+        </div>
+        <div class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aspernatur, ipsum labore beatae minus
+                molestiae dolorum aut, iste dicta sequi eveniet? Earum velit cumque corrupti laborum iure quaerat
+                dignissimos placeat!</p>
+        </div>
+    </div>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+            width: 34px;
+            border-radius: 20px;
+        }
+
+        header h3 {
+            margin: 0px;
+            text-align: center;
+        }
+
+        .port {
+            width: 90%;
+            margin: auto;
+            border: 2px solid red;
+
+        }
+
+        .box {
+            border: 4px solid black;
+            background-color: azure;
+            margin: 20px 0px;
+            padding: 23px;
+            width: 32.7%;
+            display: inline-block;
+            box-sizing: border-box;
+        }
+
+        .container3 {
+            margin: auto;
+            width: 90%;
+            box-sizing: border-box;
+        }
+    </style>
+    <!-- position: static (default) ,absolutu=e , relative,fixed ,sticky -->
+    <h2>Position Properties</h2>
+    <div class="container4">
+        <div class="box2" id="box1">1</div>
+        <div class="box2" id="box2">2</div>
+        <div class="box2" id="box3">Chat With us</div>
+        <div class="box2" id="box4">4</div>
+    </div>
+    <style>
+        .container4 {
+            border: 2px solid green;
+            background-color: khaki;
+            height: 1000px;
+            width: 800px;
+        }
+
+        .box2 {
+            border: 2px solid red;
+            width: 150px;
+            height: 150px;
+            margin: 2px;
+            display: inline-block;
+
+        }
+
+        #box3 {
+            /* relative : related / respect to its normal position  */
+            /* position:relative; */
+            /* absolute:  relative / respect to its 1st parent position  */
+            /* position:absolute   ; */
+            /* fixed : position related to browser window */
+            /* position: fixed;
+            
+            right: 14px;
+             bottom: 4px; */
+            /* left: 134px; */
+            background-color: red;
+            position: sticky;
+            top: 4px;
+        }
+    </style>
+    <h2>Visibility & z-index</h2>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+    <style>
+        .box {
+            width: 170px;
+            height: 170px;
+            border: 2px solid black;
+
+        }
+
+        #box1 {
+            position: relative;
+            left: 54px;
+            background-color: green;
+            z-index: 11;
+        }
+
+        #box2 {
+            position: relative;
+            left: 10px;
+            background-color: red;
+            z-index: 10;
+            /* visibility: hidden; */
+            /* hide the element */
+            /* display: none; */
+            /* hide the element and space */
+            /* z-index: only works for position : relative ,absolute , fixed & sticky; */
+
+        }
+
+        #box3 {
+            background-color: blue;
+        }
+
+        #box4 {
+            background-color: yellow;
+        }
+    </style>
+
+    <h2> Size units</h2>
+
+    <div class="container5">
+        <h1 id="no1">This is first heading</h1>
+        <h1 id="no2">This is second heading</h1>
+        <h1 id="no3">This is third heading</h1>
+    </div>
+    <style>
+        html {
+            font-size: 20px;
+        }
+
+        .container5 {
+            font-size: 10px;
+            border: 2px solid blue;
+            height: 100vh;
+            width: 50vw;
+            /* viewput height & width   */
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #no1 {
+            /* font-size: 3em; */
+            /* 3 * parents font size ( containers font =10px) =3*10=30px   */
+            /* padding: 3em; */
+            /* 3 * font size of it's own font size =3* 30 = 90px */
+        }
+
+        #no2 {
+            /* font-size: 3rem; */
+            /* 3* font size of html  */
+            /* padding: 3rem; */
+            /* 3* font size of html  */
+
+            /* https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984          To learn more about rem and em */
+        }
+    </style>
+
+    <h2>Media Queries</h2>
+    <div class="boxm" id="boxm-1">This is a iPhone</div>
+    <div class="boxm" id="boxm-2">This is a tablet</div>
+    <div class="boxm" id="boxm-3">This is a desktop</div>
+    <div class="boxm" id="boxm-4">This is a widescreen computer</div>
+    <style>
+        .boxm {
+            font-size: 72px;
+            background-color: red;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            display: none;
+
+        }
+
+        @media (max-width:300px) {
+            #boxm-1 {
+                display: block;
+                background-color: violet;
+            }
+        }
+
+        @media only screen and (min-width:300px) and (max-width:600px) {
+            #boxm-2 {
+                display: block;
+                background-color: blue;
+            }
+        }
+
+        @media only screen and (min-width:600px) and (max-width:900px) {
+            #boxm-3 {
+                display: block;
+                background-color: skyblue;
+            }
+        }
+
+        @media (min-width:900.1px) {
+            #boxm-4 {
+                display: block;
+                background-color: green;
+            }
+        }
+    </style>
+
+</body>
+
+</html>

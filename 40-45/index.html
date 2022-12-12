@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+</head>
+
+<body>
+    <h2>CSS Grid : use to disign layout of page</h2>
+    <div class="container">
+        <div class="item">This is item-1</div>
+        <div class="item">This is item-2</div>
+        <div class="item">This is item-3</div>
+        <div class="item">This is item-4</div>
+        <div class="item">This is item-5</div>
+        <div class="item">This is item-6</div>
+        <div class="item">This is item-7</div>
+        <div class="item">This is item-8</div>
+        <div class="item">This is item-9</div>
+    </div>
+
+    <style>
+        .container {
+            display: grid;
+            /* grid-template-columns: 200px 300px 100px; */
+            /* grid-template-columns: 200px auto 300px; */
+            grid-template-columns: 1fr 4fr 1fr;
+            grid-template-columns: repeat(4, auto);
+            grid-gap: 2rem;
+        }
+
+        .item {
+            height: 30px;
+            /* width: 100px; */
+            background-color: aqua;
+            /* margin: 4px; */
+            padding: 6px 15px;
+            border: 2px solid black;
+            font-size: 25px;
+        }
+    </style>
+
+    <h2>rows and gaps in grid</h2>
+    <div class="container2">
+        <div class="item2">This is box-1</div>
+        <div class="item2">This is box-2</div>
+        <div class="item2">This is box-3</div>
+        <div class="item2">This is box-4</div>
+        <div class="item2">This is box-5</div>
+        <div class="item2">This is box-6</div>
+        <div class="item2">This is box-7</div>
+        <div class="item2">This is box-8</div>
+        <div class="item2">This is box-9</div>
+        <div class="item2">This is box-10</div>
+    </div>
+    <style>
+        .container2{
+            display: grid;
+            grid-template-rows: 1fr 1fr 4fr;
+            grid-auto-rows: 2fr;
+            /* grid-template-columns: 1fr 4fr 2fr; */
+            grid-template-columns: repeat(4,2fr);
+            grid-gap: 1rem;
+        }
+        .item2{
+            background-color: azure;
+            border: 2px solid black;
+            /* margin: 7px; */
+            
+        }
+    </style>
+    
+    <h2>Spanning Multiple Rows and Columns in Grid</h2>
+
+        <div class="container3">
+            <div class="item3">Item-1</div>
+            <div class="item3">Item-2</div>
+            <div class="item3">Item-3</div>
+            <div class="item3">Item-4</div>
+            <div class="item3">Item-5</div>
+            <div class="item3">Item-6</div>
+            <div class="item3">Item-7</div>
+            <div class="item3">Item-8</div>
+            <div class="item3">Item-8</div>
+            <div class="item3">Item-8</div>
+            <div class="item3">Item-8</div>
+            <div class="item3">Item-8</div>
+            <div class="item3">Item-8</div>
+        </div>
+    <style>
+        .container3{
+            display: grid;
+            grid-template-columns:repeat(5,1fr);
+            grid-template-rows: repeat(4,1fr);
+            /* grid-column-gap: 6rem; */
+            /* grid-row-gap: 1rem; */
+            grid-gap: 1rem;
+        }
+        .item3{
+            background-color: bisque;
+            border: 2px solid black;
+            padding: 23px;
+            /* margin: auto; */
+
+        }
+        .item3:first-child{
+            /* start at c-1*/
+            /* end at c-3 => cover 1&2 */
+            /* grid-column-start: 1; 
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3; */
+            grid-column: 1/span 2;
+            grid-row: 1/span 2;
+        }
+    </style>
+
+    <h2>Autofix and Min Max</h2>
+
+    <div class="container4">
+        <div class="item4">Item-1</div>
+        <div class="item4">Item-2</div>
+        <div class="item4">Item-3</div>
+        <div class="item4">Item-4</div>
+        <div class="item4">Item-5</div>
+        <div class="item4">Item-6</div>
+        <div class="item4">Item-7</div>
+        <div class="item4">Item-8</div>
+        <div class="item4">Item-9</div>
+        <div class="item4">Item-10</div>
+        <div class="item4">Item-11</div>
+        <div class="item4">Item-12</div>
+    </div>
+    <style>
+        .container4{
+            display: grid;
+            grid-gap: 1rem;
+            /* grid-template-columns: 112px 112px 112px; */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            /* grid-template-columns: repeat(auto-fit,minmax(400px,1fr)); */
+            grid-template-columns: repeat(auto-fit,minmax(40px,80px));
+            justify-content: center;
+            align-items: center ;
+        }
+        .item4{
+            background-color: rgb(193, 174, 211);
+            border: 2px solid black ;
+            padding: 34px;
+        }
+    </style>
+
+<h2>Creating Layouts Using Grid Template Area</h2>
+
+<div class="container5">
+    <div id="navbar"class=" item5">
+        Home about contact us
+    </div>
+    <div id="section"class=" item5 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit commodi possimus iste molestiae vel cumque neque at aut dolor amet. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla voluptas magnam odio non error est adipisci reprehenderit itaque repudiandae iste sapiente expedita atque, accusamus temporibus tempora nesciunt laborum suscipit beatae eos veniam architecto dolores natus dignissimos. Eos natus laborum quam dolores, molestiae corporis, repellendus vitae explicabo totam omnis debitis reprehenderit sed sapiente? Neque aut iste suscipit? Ullam nemo eveniet maiores perspiciatis repellendus magni unde, cum odit dolor perferendis omnis optio explicabo laborum rerum est debitis! Rerum quasi cum quia explicabo dignissimos. Aliquid vitae, rerum dicta minus possimus maiores aperiam animi nobis ut laborum voluptate architecto! Aliquid incidunt deleniti eum tempore! </div>
+    <div id="aside" class="item5 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi non numquam atque.</div>
+    <footer class="item5">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</footer>
+
+    <!-- <div class="item5">item-1</div>
+    <div class="item5">item-2</div>
+    <div class="item5">item-3</div>
+    <div class="item5">item-4</div>
+    <div class="item5">item-5</div>
+    <div class="item5">item-6</div>
+    <div class="item5">item-7</div>
+    <div class="item5">item-8</div>
+    <div class="item5">item-9</div>
+    <div class="item5">item-10</div>
+    <div class="item5">item-11</div>
+    <div class="item5">item-12</div>
+    <div class="item5">item-13</div>
+    <div class="item5">item-14</div> -->
+</div>
+
+<style>
+    .container5{
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: "navbar navbar navbar navbar""section section section aside"
+        "footer footer footer footer";
+    }
+    .item5{
+        background-color: rgb(193, 178, 178);
+        border: 2px solid black;
+        padding: 12px 22px;
+    }
+    #navbar{
+        grid-area: navbar;
+    }
+    #section{
+        grid-area: section;
+    }
+    #aside{
+        grid-area: aside;
+    }
+    footer{
+        grid-area: footer;
+    }
+</style>
+</body>
+
+</html>

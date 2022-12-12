@@ -1,0 +1,20 @@
+{
+  "name": "69npm",
+  "version": "1.0.0",
+  "description": "First npm module by Tamal Mallick",
+  "main": "69npm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mallickboy"
+  ],
+  "author": "Tamal",
+  "license": "ISC",
+  "dependencies": {
+    "slugify": "^1.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

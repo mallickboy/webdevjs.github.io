@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>js and console</h2>
+
+    <div class="container">
+        <div class="row">
+            <p>This is a container</p>
+        </div>
+    </div>
+
+    <script>
+        console.log('Hellow world')
+        // prompt('Hellow Tamal')
+        // alert('hi')
+    </script>
+
+    <h2>Variables, Data Types and Operators in JavaScript</h2>
+
+    <div class="container2">
+        <h2>This is heading</h2>
+
+        <div class="content2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tenetur quibusdam vel magnam molestiae
+                doloribus, cumque nemo ullam obcaecati? Tenetur iure voluptatibus possimus numquam pariatur commodi
+                cumque molestiae voluptatum blanditiis? Molestias fugiat enim suscipit.</p>
+        </div>
+    </div>
+    <script>
+        var a = 2;
+        var b = "Tamal"
+        var c;
+        // console.log(a );
+        // console.log(b);
+        // console.log(c );
+
+        // operators in JS
+        // In 3+4 '+' is operator & 3,4 is operand
+        // 1. unary operator - It has single operand (x = -x)
+        a = -a;
+        // console.log('Unary operarator ex.',a);
+        //2.Binary operator - it has two operands ( x = x+8)
+        a = a + 8;
+        // console.log('Binary operator example =',a);
+
+        // operand - entities on which operators operates
+
+        // arithmetic operators
+        var num1 = 10, num2 = 4;
+        console.log('The value of ', num1, ' + ', num2, '=', (num1 + num2));
+        console.log('the value of num1 + num2 =' + (num1 + num2))
+        console.log('the value of num1 ^ num2 =' + (num1 ** num2))
+        console.log('the value of ++num1 =' + (++num1))
+        // console.log('the value of num1++ ='+(num1++))
+        console.log('the value of num1++ =' + (--num1))
+    </script>
+
+    <h2>Strings in JavaScript</h2>
+    <div class="container3">
+        <h2>Heading</h2>
+        <div id="content3"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam molestiae quibusdam illo, ducimus enim ut
+            ratione soluta! Quaerat quia consequuntur recusandae laboriosam sunt quisquam laborum, itaque possimus
+            veniam necessitatibus nostrum suscipit magnam accusamus commodi.</p>
+    </div>
+    <script>
+        console.log('\n\tStrings in JavaScript\n\n');
+        var string = 'This is "a" string';
+        var name = 'Tamal';
+        var roll = 'cse/21099';
+        var col = 'IIIT Kalyani';
+        var temp = `"${name}" is "" '' a execellent person \n and\t study \b in ${col}`;
+        console.log(temp);
+        var len = name.length;
+        console.log(`Length of ${name} = ` + len)
+        var merge = name + roll;
+        console.log(string + merge + merge);
+
+        var y = new String('This is a string'); // string constractor
+        console.log(y)
+        document.getElementById('content3').innerHTML = `<h3> Welcome ${name}</h3>`
+    </script>
+
+    <h2>String Functions in JavaScript</h2>
+    <div class="container4">
+
+    </div>
+    <script>
+        console.log('\n\nString Functions in JavaScript\n\n');
+        var str = 'This is a string';
+        var position = str.indexOf('is');// first occurance of sub string
+        console.log(position);
+        position = str.lastIndexOf('is');// last occurance of sub string
+        console.log(position);
+
+        // sub-string from a string
+        // var substr=str.slice(1,6); // -ve +ve
+        // var substr=str.substring(1,6); // +ve
+        var substr1 = str.substr(1, 6); // lenght wize extraction
+        // print("");
+        console.log(substr1);
+        var replaced = str.replace('a string', 'Tamal');
+        console.log(str);
+        console.log(replaced);
+
+        console.log(str.toUpperCase(replaced));
+        console.log(replaced.concat(` Mallick`));
+
+        var strWithWhitespace = "        this  contains        whitespace     ";
+        // console.log(strWithWhitespace);
+        // console.log(strWithWhitespace.trim());
+
+        console.log(str.charAt(2));
+        console.log(str.charCodeAt(2));
+
+        var slice = str[2];
+        console.log(slice)
+
+    </script>
+
+    <h2>Scope, If-else Conditionals & Switch Case in JavaScript</h2>
+    <script>
+        console.log(`\n\nScope, If-else Conditionals & Switch Case in JavaScript\n\n`);
+        var string1 = 'This is a string';
+        var string1 = 'This is a string2';
+        console.log(string1);
+        let p = 'rrr';// let is a block variable
+        {
+            let p = 'fff';
+            console.log(p);
+        }
+
+        console.log(p);
+        const x = 20;
+        // x=10;
+
+        let age = 18;
+        if (age > 18) {
+            console.log('You can vote')
+        }
+        else {
+            console.log('You can not vote')
+
+        }
+        switch (age) {
+            case 10:
+                console.log('value of age is 10');
+                break;
+            case 18:
+                console.log('value of age is 18');
+                break;
+            case 30:
+                console.log('value of age is 30');
+                break;
+
+            default:
+                console.log('value of age is beyond 30');
+
+                break;
+        }
+    </script>
+
+    <h2>Arrays & Objects in JavaScript</h2>
+
+    <script>
+        console.log('\n\nArrays & Objects in JavaScript\n\n');
+        let myVar=34;
+        let myVar2='tamal';
+        let myVar3=true;
+        let myVar4=null;
+        let myVar5=undefined;
+
+        let employee={
+            name:'raju',
+            id:8903,
+            post:'manager',
+            "post1 2":'permanent'
+        };
+        console.log(employee);
+        //run in console employee['post1 2']
+        // let name=[1,2,'tamal'];
+        // let name=new Array(12,10,1,'tamal');
+        let name=new Array(2);
+        name=name.sort();
+        name.push('this is pushed');
+        console.log(name)
+
+    </script>
+
+    <h2>Functions in JavaScript</h2>
+
+    <script>
+        console.log('\n\nFunctions in JavaScript\n\n')
+        let name1='Tamal';
+        let name2= 'Raju';
+        let name3='Sagar';
+        let name4="Joy";
+        // console.log(name1+' is a good boy');
+        function greet(name,greetText='greetings from Java Script '){
+            let name1='xyz';
+            console.log(greetText+name+'\t'+ name+' is a good boy');
+
+        }
+        let greetText='Good morning ';
+        greet(name1,greetText);
+        greet(name2,greetText);
+        greet(name3,greetText);
+        greet(name4,greetText);
+        greet(name4,);
+
+        function sum (a,b,c){
+            return a+b+c;
+        }
+        console.log(sum(1,2,7));
+    </script>
+
+    <h2>Alert, Prompt, Confirm</h2>
+
+    <script>
+        console.log('\n\nAlert, Prompt, Confirm\n\n')
+        //alert('This is a message'); // doesn't return anything
+        // let ask=prompt("What is your name ?","Guest");
+        // console.log(ask);
+        let deletePost=true;
+        //deletePost= confirm('Delete sure ?');
+        console.log(deletePost);
+        if (deletePost) {
+            console.log("Post deleted");
+        }
+        else
+            console.log("Post kept");
+         
+        
+    </script>
+
+    <h2>for, while, forEach, Do While Loops</h2>
+
+    <script>
+        console.log("\n\nfor, while, forEach, Do While Loops\n\n");
+
+        // for (let i = 0; i < 5; i++) {
+        //     const element = i;
+        //     console.log(i);
+        // }
+        let friends=['Tamal',"Barshon","Arya","Harsh","Sangbed"];
+        // for (let index = 0; index < friends.length; index++) {
+        //     const element = friends[index];
+        //     console.log("Hellow "+element);
+        // }
+        /**/    
+        // friends.forEach(function f(params) {
+        //     console.log("Hellow "+params+" Modern Js");
+        // });
+        // for(element of friends){
+        //     console.log("Hellow "+element+" Modern Js again");
+
+        // }
+
+        let employee2={
+            name:'Raju',
+            salarry: 200,
+            branch:'NBP'
+        }    
+        for(key in employee2){
+            console.log(`The ${key} of employee2 is ${employee2[key]}`);
+        }
+        let i=1;
+        while (i<4) {
+            console.log(`${i}<4`);
+            i++;
+        }
+        do {
+            // console.log("4<i<8");
+            console.log(`3<${i}<8`);
+            i++;
+        } while (i<8);
+    </script>
+</body>
+
+</html>
