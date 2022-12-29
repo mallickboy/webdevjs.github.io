@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.logo {
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    width: 40px;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 15px;
+}
+
+body {
+    background-image: linear-gradient(white, rgb(141, 171, 255));
+    height: 96vh;
+    /* overflow-y: hidden; */
+    /* height: 100vh; */
+    /* justify-content: center; */
+}
+
+.container {
+    max-width: 80vw;
+    border: 2px solid black;
+    margin: auto;
+    height: 60vh;
+    padding: 1%;
+    overflow-y: auto;
+    margin-bottom: 23px;
+    border-radius: 3px;
+}
+
+.message {
+    background-color: #fefff5;
+    width: 30%;
+    padding: 10px;
+    margin: 17px 10px;
+    border-radius: 5px;
+}
+
+.left {
+    float: left;
+    clear: both;
+}
+.middleIn {
+    margin: 5px auto;
+    clear: both;
+    background-color: rgb(238, 255, 242);
+    padding: 2px;
+    border-radius: 20px;
+    text-align: center;
+    width: 20%;
+}
+.middleOut {
+    margin: 5px auto;
+    clear: both;
+    background-color: rgb(255, 241, 238);
+    padding: 2px;
+    border-radius: 20px;
+    text-align: center;
+    width: 20%;
+}
+
+.right {
+    float: right;
+    clear: both;
+    text-align: right;
+}
+#send-container{
+    text-align: center;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    width: 90%;
+    /* border: 1px solid blue; */
+}
+#messageInp{
+    width: 69.3%;
+    border: 2px solid black;
+    border-radius: 3px;
+    padding:7px 0.75%;
+    margin:9px 0;
+    font-size: 18px;
+}
+
+.btn{
+    width: 20.3%;
+    padding:8px 0.55%;
+    border: 2px solid black;
+    border-radius: 3px;
+    font-size: 18px;
+    background-color: rgb(251, 234, 255);
+    /* margin-right: 5px; */
+}
+
